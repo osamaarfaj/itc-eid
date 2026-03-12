@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ITC Eid Card</title>
+
+<style>
+body{
+background:#0b1c3d;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.container{
+max-width:500px;
+margin:auto;
+}
+
+.logo{
+width:220px;
+margin-bottom:20px;
+}
+
+input{
+padding:12px;
+font-size:16px;
+width:80%;
+border-radius:8px;
+border:none;
+margin-top:10px;
+}
+
+button{
+padding:12px 25px;
+background:gold;
+border:none;
+border-radius:8px;
+font-size:16px;
+margin-top:10px;
+cursor:pointer;
+}
+
+.card{
+margin-top:25px;
+background:#0b1c3d;
+border:1px solid gold;
+border-radius:12px;
+padding:30px;
+}
+
+.arabic{
+font-size:36px;
+color:gold;
+margin-bottom:10px;
+}
+
+.english{
+font-size:18px;
+margin-bottom:15px;
+}
+
+.name{
+margin-top:15px;
+font-size:24px;
+color:#fff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="itc_company_logo.png" class="logo">
+
+<input id="name" placeholder="اكتب اسمك / Enter your name">
+
+<br>
+
+<button onclick="generate()">Generate Card</button>
+
+<div class="card" id="card" style="display:none">
+
+<div class="arabic">
+عيد فطر سعيد
+</div>
+
+<div class="english">
+Eid Al-Fitr Mubarak
+</div>
+
+كل عام وأنتم بخير<br>
+Wishing you a joyful and blessed Eid
+
+<div class="name" id="output"></div>
+
+</div>
+
+</div>
+
+<script>
+function generate(){
+var name=document.getElementById("name").value;
+document.getElementById("card").style.display="block";
+document.getElementById("output").innerHTML=name;
+}
+</script>
+
+</body>
+</html>
